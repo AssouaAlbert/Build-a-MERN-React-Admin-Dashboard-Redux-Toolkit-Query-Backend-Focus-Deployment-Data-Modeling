@@ -25,13 +25,15 @@ import {
   dataProductStat,
   dataProduct,
   dataTransaction,
-  dataOverallStat
+  dataOverallStat,
+  dataAffiliateStat
 } from "./data/index.js";
 import User from "./models/user.js";
 import ProductStat from "./models/productStat.js";
 import Product from "./models/product.js";
 import Transactions from "./models/transactions.js";
 import OverallStat from "./models/overallStat.js";
+import AffiliateStat from "./models/affiliateStat.js";
 
 /**CONFIGURATIONS */
 dotenv.config();
@@ -64,6 +66,7 @@ mongoose
     // ProductStat.insertMany(dataProductStat); //Add users just once.
     // Transactions.insertMany(dataTransaction); //Add users just once.
     // OverallStat.insertMany(dataOverallStat); //Add users just once.
+    // AffiliateStat.insertMany(dataAffiliateStat); //Add users just once.
   })
   .catch((error) => {
     console.log(error.message);
